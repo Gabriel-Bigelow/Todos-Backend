@@ -1,4 +1,5 @@
 const express = require('express');
+const serverless = require('serverless-http');
 require('dotenv').config();
 const todoRoutes = require('./routes/todo');
 
@@ -19,3 +20,5 @@ app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`App listening at http://localhost:${port}`);
 });
+
+module.exports.handler = serverless(app);
