@@ -13,7 +13,7 @@ app.use('/api', todoRoutes);
 
 //netlify test route
 app.get('/', (res) => {
-  res.status(200).send('This is working at the root');
+  return res.send('This is working at the root');
 })
 
 app.listen(port, () => {
