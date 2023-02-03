@@ -20,10 +20,6 @@ app.get('/test', (req, res) => {
   res.status(200).send('This is working at /test');
 });
 
-app.get('/test2', (req, res) => {
-  res.status
-})
-
 app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`App listening at http://localhost:${port}`);

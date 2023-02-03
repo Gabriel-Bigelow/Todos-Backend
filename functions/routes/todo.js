@@ -7,7 +7,7 @@ router.get('/todos', read);
 router.delete('/todos/:id', removeTodo);
 
 //netlify test route
-router.get('/', (res) => {
+router.get('/', (req, res) => {
     res.status(200).send('This is working.');
 })
 
