@@ -12,17 +12,11 @@ const port = process.env.PORT || 8000;
 app.use('/api', todoRoutes);
 app.use(cors());
 
-//netlify test route
-app.get('/', (req, res) => {
-  res.send('This is working at the root');
-})
-
 app.get('/test', (req, res) => {
   res.status(200).send('This is working at /test');
 });
 
 app.listen(port, () => {
-  // eslint-disable-next-line no-console
   console.log(`App listening at http://localhost:${port}`);
 });
 
