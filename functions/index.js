@@ -12,15 +12,15 @@ app.use('/api', todoRoutes);
 
 
 //netlify test route
-app.get('/', (res) => {
+app.get('/', (req, res) => {
   res.send('This is working at the root');
 })
 
-app.get('/test', (res) => {
+app.get('/test', (req, res) => {
   res.status(200).send('This is working at /test');
 });
 
-app.get('/test2', (res) => {
+app.get('/test2', (req, res) => {
   res.status
 })
 
