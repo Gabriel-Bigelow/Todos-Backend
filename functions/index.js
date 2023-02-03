@@ -2,6 +2,7 @@ const express = require('express');
 const serverless = require('serverless-http');
 require('dotenv').config();
 const todoRoutes = require('./routes/todo');
+const cors = require('cors');
 
 // Running express server
 const app = express();
@@ -9,7 +10,7 @@ const port = process.env.PORT || 8000;
 
 // route middlewares
 app.use('/api', todoRoutes);
-
+app.use(cors());
 
 //netlify test route
 app.get('/', (req, res) => {
