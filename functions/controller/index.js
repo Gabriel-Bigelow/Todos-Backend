@@ -1,5 +1,5 @@
 const formidable = require('formidable');
-const { create, get, remove } = require('../model/todo');
+const { create, get, remove } = require('../../model/todo');
 
 exports.create = (req, res) => {
   const form = new formidable.IncomingForm();
