@@ -1,7 +1,7 @@
 const express = require('express');
 const serverless = require('serverless-http');
 require('dotenv').config();
-const todoRoutes = require('./functions/routes/todo');
+const todoRoutes = require('./routes/todo');
 
 // Running express server
 const app = express();
